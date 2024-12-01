@@ -9,11 +9,11 @@ import (
 	"time"
 
 	"github.com/davecgh/go-spew/spew"
-	"github.com/storskegg/poc-kybercast/kybercaster"
+	"github.com/storskegg/poc-kybercaster/kybercaster"
 )
 
 func main() {
-	kc, err := kybercaster.New()
+	kc, err := kybercaster.New("127.0.0.1")
 	if err != nil {
 		panic(err)
 	}
