@@ -3,13 +3,13 @@ package main
 import (
 	"context"
 	"fmt"
-	"keybase/scratch/poc-kybercast/kybercaster"
 	"os"
 	"os/signal"
 	"syscall"
 	"time"
 
 	"github.com/davecgh/go-spew/spew"
+	"github.com/storskegg/poc-kybercast/kybercaster"
 )
 
 func main() {

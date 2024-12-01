@@ -1,6 +1,8 @@
 package kybercaster
 
 import (
+	"net"
+
 	"github.com/awnumar/memguard"
 	kyberk2so "github.com/symbolicsoft/kyber-k2so"
 	"golang.org/x/crypto/chacha20poly1305"
@@ -12,9 +14,11 @@ type KyberCaster struct {
 	PublicKey  *memguard.LockedBuffer
 
 	w chan []byte
+
+	UDPConn *net.UDPConn
 }
 
-func New() (*KyberCaster, error) {
+func New(address string) (*KyberCaster, error) {
 	kc := KyberCaster{}
 
 	kc.w = make(chan []byte)
